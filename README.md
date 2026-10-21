@@ -1,13 +1,13 @@
 # AURA | GenAI-Powered Clothing Boutique
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Tests](https://img.shields.io/badge/tests-32%20passed-success)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)
-![Pydantic AI](https://img.shields.io/badge/Pydantic_AI-2.59-E92063?logo=pydantic&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq-LPU_Inference-F55036)
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
-![MongoDB](https://img.shields.io/badge/MongoDB-7.0-47A248?logo=mongodb&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-ECS_Fargate_%26_CloudFront-232F3E?logo=amazon-aws&logoColor=white)
+![Build Status](https://img.shields.io/badge/build-passing-24292e?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-32%20passed-24292e?style=flat-square)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-24292e?style=flat-square&logo=fastapi&logoColor=white)
+![Pydantic AI](https://img.shields.io/badge/Pydantic_AI-2.59-24292e?style=flat-square&logo=pydantic&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-LPU_Inference-24292e?style=flat-square)
+![React](https://img.shields.io/badge/React-18-24292e?style=flat-square&logo=react&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-7.0-24292e?style=flat-square&logo=mongodb&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-ECS_Fargate-24292e?style=flat-square&logo=amazon-aws&logoColor=white)
 
 A modern, production-ready, cloud-native clothing e-commerce platform featuring **Aura**, an integrated GenAI shopping assistant powered by **Pydantic AI** and **Groq LPU** inference (`llama-3.3-70b-versatile`).
 
