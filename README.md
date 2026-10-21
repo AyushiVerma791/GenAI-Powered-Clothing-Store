@@ -193,15 +193,3 @@ To prevent ongoing AWS charges, destroy infrastructure when testing is complete:
 ```bash
 terraform destroy
 ```
-
----
-
-## Documentation Directory
-
-- [Architecture & Design Details](docs/architecture.md)
-- [REST API Reference](docs/api_reference.md)
-- [MongoDB Schemas & Indexing](docs/mongo_schema_indexing.md)
-- [Pydantic AI & Groq Deep Dive](docs/ai_agent_tools.md)
-- [Developer Setup Guide](docs/setup_guide.md)
-- [Troubleshooting & FAQs](docs/troubleshooting.md)
-- [M.Tech Interview Defense & Model Answers](docs/interview_prep.md)
