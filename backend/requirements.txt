@@ -1,0 +1,31 @@
+# FastAPI & Server
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.30.0,<1.0.0
+pydantic>=2.10.0,<3.0.0
+pydantic-settings>=2.7.0,<3.0.0
+email-validator>=2.2.0
+python-multipart>=0.0.18
+
+# Database
+motor>=3.6.0,<4.0.0
+pymongo>=4.9.0,<5.0.0
+dnspython>=2.7.0
+
+# Security & Authentication
+pyjwt[crypto]>=2.10.0,<3.0.0
+bcrypt>=4.2.0,<6.0.0
+cryptography>=43.0.0
+
+# AI Layer: Pydantic AI & Groq
+pydantic-ai-slim[groq]>=0.0.24
+groq>=0.15.0
+httpx>=0.28.0
+
+# Cloud & Storage
+boto3>=1.35.0
+
+# Testing & Quality
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
+mongomock>=4.3.0
+mongomock-motor>=0.0.35
