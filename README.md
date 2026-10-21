@@ -15,7 +15,7 @@ Customers discover garments through natural-language conversations, receive grou
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
@@ -71,22 +71,22 @@ flowchart TD
 
 ---
 
-## ✨ Features & Capabilities
+## Features & Capabilities
 
-### 🛍️ Customer Storefront (React 18 + Vite)
+### Customer Storefront (React 18 + Vite)
 - **Home Experience:** Hero section, curated category banners, featured arrival showcase, and interactive AI prompt triggers.
 - **Dynamic Catalog:** Filtering by category, price range, size, color, keyword search, and sorting (newest, price ascending/descending, top-rated).
-- **Product Details:** High-resolution image galleries, stock status indicators, interactive color/size variant pickers, and direct *"Ask Aura AI about this piece"* action.
+- **Product Details:** High-resolution image galleries, stock status indicators, interactive color/size variant pickers, and direct "Ask Aura AI about this piece" action.
 - **Cart & Server-Validated Checkout:** Live quantity updates, free shipping threshold calculations ($100+), tax estimation (8%), and atomic stock decrementing.
 - **Order Tracking:** Persistent order histories with immutable item pricing snapshots.
 
-### 🤖 Grounded GenAI Shopping Stylist (Pydantic AI + Groq)
+### Grounded GenAI Shopping Stylist (Pydantic AI + Groq)
 - **Zero-Hallucination Architecture:** The model does not invent products or prices. It queries MongoDB using registered Pydantic AI function tools (`search_catalog`, `get_product_details`, `get_available_categories`).
-- **Groq LPU Ultra-Low Latency:** Inference speeds exceeding 300 tokens/sec with `llama-3.3-70b-versatile`.
+- **Groq LPU Ultra-Low Latency:** High-speed inference using `llama-3.3-70b-versatile`.
 - **Typed Output Guarantees:** Output is validated against `AgentStructuredResponse` schemas before delivery.
 - **Deterministic Offline Testing:** Includes a development and testing mode utilizing `TestModel` that runs 100% offline without requiring paid API tokens.
 
-### 🛡️ Secure Backend & Administration (FastAPI + MongoDB)
+### Secure Backend & Administration (FastAPI + MongoDB)
 - **Role-Based Access Control (RBAC):** Customer vs Administrator roles protected by cryptographically signed JWTs and salted `bcrypt` password hashing (12 rounds).
 - **Admin Console:** Interface for creating, editing, and deleting garments, adjusting stock, uploading product media, and managing order fulfillment states.
 - **Safe Media Handling:** Validates file signatures (magic bytes), MIME types, and file size ceilings before saving locally or uploading to AWS S3.
@@ -94,7 +94,7 @@ flowchart TD
 
 ---
 
-## 🚀 Quickstart Guide
+## Quickstart Guide
 
 ### Option 1: One-Command Local Development
 
@@ -149,7 +149,7 @@ docker compose exec backend python scripts/create_admin.py
 
 ---
 
-## 🔑 Default Development Credentials
+## Default Development Credentials
 
 | Role | Email | Password | Access Capabilities |
 |---|---|---|---|
@@ -158,7 +158,7 @@ docker compose exec backend python scripts/create_admin.py
 
 ---
 
-## 🧪 Automated Testing & Verification
+## Automated Testing & Verification
 
 The repository includes a comprehensive automated test suite with **32 tests and 100% pass rate**:
 
@@ -178,7 +178,7 @@ $env:PYTHONPATH="backend"
 
 ---
 
-## ☁️ AWS Deployment & CI/CD
+## AWS Deployment & CI/CD
 
 ### Architecture Overview
 1. **Frontend:** React SPA built with Vite, synchronized to an Amazon S3 bucket, and distributed via Amazon CloudFront CDN with Origin Access Control (OAC).
@@ -205,7 +205,7 @@ terraform destroy
 
 ---
 
-## 📄 Documentation Directory
+## Documentation Directory
 
 - [Architecture & Design Details](docs/architecture.md)
 - [REST API Reference](docs/api_reference.md)
@@ -214,14 +214,3 @@ terraform destroy
 - [Developer Setup Guide](docs/setup_guide.md)
 - [Troubleshooting & FAQs](docs/troubleshooting.md)
 - [M.Tech Interview Defense & Model Answers](docs/interview_prep.md)
-
----
-
-## 💼 Resume-Ready Bullets (Based on Implemented & Verified Code)
-
-- *Architected and deployed a full-stack, cloud-native clothing e-commerce platform using FastAPI, React 18, MongoDB, and AWS ECS Fargate.*
-- *Implemented a grounded GenAI shopping assistant using Pydantic AI and Groq LPU inference (Llama 3.3 70B), designing custom database retrieval tools and typed Pydantic output schemas that eliminated product hallucinations.*
-- *Engineered an atomic inventory reservation engine in MongoDB (`$inc` with conditional filters), preventing concurrency race conditions and overselling during simultaneous checkouts.*
-- *Constructed an immutable order-snapshot data model preserving historical purchase prices and item specifications against downstream catalog revisions.*
-- *Authored a 32-test automated suite using Pytest, `mongomock-motor`, and Pydantic AI `TestModel`, establishing 100% test coverage across RBAC, cart calculations, inventory validation, and AI tools without invoking paid LLM APIs.*
-- *Designed AWS Infrastructure-as-Code with Terraform, orchestrating an Application Load Balancer, ECS Fargate service, ECR registry, CloudFront CDN, and secure GitHub Actions CI/CD with AWS OIDC federation.*
