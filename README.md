@@ -149,15 +149,6 @@ docker compose exec backend python scripts/create_admin.py
 
 ---
 
-## Default Development Credentials
-
-| Role | Email | Password | Access Capabilities |
-|---|---|---|---|
-| **Administrator** | `admin@clothingstore.com` | `AdminStrongPass123!` | Catalog CRUD, Media Uploads, Order Fulfillment |
-| **Demo Customer** | `customer@clothingstore.com` | `CustomerPass123!` | Shopping Bag, Checkout, Order History, AI Chat |
-
----
-
 ## Automated Testing & Verification
 
 The repository includes a comprehensive automated test suite with **32 tests and 100% pass rate**:
