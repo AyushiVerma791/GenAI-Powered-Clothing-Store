@@ -16,8 +16,17 @@ async def create_admin():
     full_name = "Store Administrator"
 
     print(f"Connecting to MongoDB at {settings.MONGODB_URI}...")
-    client = AsyncIOMotorClient(settings.MONGODB_URI)
+    client = AsyncIOMotorClient(settings.MONGODB_URI, serverSelectionTimeoutMS=5000)
     db = client[settings.MONGODB_DB_NAME]
+
+    try:
+        await client.admin.command('ping')
+        print("MongoDB connection verified.")
+    except Exception as e:
+        print(f"Cannot connect to MongoDB: {e}")
+        print("Please ensure MongoDB is running (e.g. via 'docker compose up -d mongo' or MongoDB Atlas).")
+        client.close()
+        return
 
     existing = await db.users.find_one({"email": email})
     now = datetime.now(timezone.utc)
